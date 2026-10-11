@@ -3,17 +3,21 @@
 > Good intentions, shaky hands. STP does not know what he is doing. We test, we write down what we think we saw, and that is the whole product. A number here is not the truth. A chart is not the truth. Any other sentence that sounds sure of itself is not the truth either. Do not count any of it as a claim.
 >
 > [Disclaimer](DISCLAIMER.md)
+>
+> **Part of [tn-master](https://github.com/STP-KAS/tn-master)**, the map of every TN10 storm. Renamed on 11 Oct 2026 from `grok-bot-vprogs-round4`; old links redirect here.
+>
+> ← previous storm: [tn10-storm-2026-09-26-r3](https://github.com/STP-KAS/tn10-storm-2026-09-26-r3) | next storm: [tn10-storm-2026-09-26-r5](https://github.com/STP-KAS/tn10-storm-2026-09-26-r5) →
 
 > **Experimental only. Not a product.**
 >
 > Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
 
-# grok-bot-vprogs round 4 — final (up to 09:20 CEST)
+# tn10-storm-2026-09-25-r1-private round 4 — final (up to 09:20 CEST)
 
 Report by Grok (acting for stp), 26 Sep 2026. All times are CEST (Europe/Brussels).
-**Round 4 final report, with data up to 09:20 CEST on 26 Sep 2026.** At 09:17 the user changed the plan: storm until the faucet is empty, plus our own index-free tic-tac-toe and vprog runners. That work (the 11:52 stop removed, higher TPS/fee) is round 5: [STP-KAS/grok-bot-vprogs-round5](https://github.com/STP-KAS/grok-bot-vprogs-round5). The storm config was left unchanged until this report was pushed; round 5 records the switch time.
+**Round 4 final report, with data up to 09:20 CEST on 26 Sep 2026.** At 09:17 the user changed the plan: storm until the faucet is empty, plus our own index-free tic-tac-toe and vprog runners. That work (the 11:52 stop removed, higher TPS/fee) is round 5: [STP-KAS/tn10-storm-2026-09-26-r5](https://github.com/STP-KAS/tn10-storm-2026-09-26-r5). The storm config was left unchanged until this report was pushed; round 5 records the switch time.
 
-Next rounds: [round 5](https://github.com/STP-KAS/grok-bot-vprogs-round5), [round 6](https://github.com/STP-KAS/grok-bot-vprogs-round6), [round 7](https://github.com/STP-KAS/tn10-vprogs-round7-ideas), [round 8](https://github.com/STP-KAS/tn10-vprogs-round8-covenants). Previous rounds: [round 1](https://github.com/STP-KAS/grok-bot-vprogs-round1-public) (public clean copy), [round 2](https://github.com/STP-KAS/grok-bot-vprogs-round2), and [round 3](https://github.com/STP-KAS/grok-bot-vprogs-round3).
+Next rounds: [round 5](https://github.com/STP-KAS/tn10-storm-2026-09-26-r5), [round 6](https://github.com/STP-KAS/tn10-storm-2026-09-26-r6), [round 7](https://github.com/STP-KAS/tn10-storm-2026-09-26-r7), [round 8](https://github.com/STP-KAS/tn10-storm-2026-09-26-r8). Previous rounds: [round 1](https://github.com/STP-KAS/tn10-storm-2026-09-25-r1) (public clean copy), [round 2](https://github.com/STP-KAS/tn10-storm-2026-09-25-r2), and [round 3](https://github.com/STP-KAS/tn10-storm-2026-09-26-r3).
 
 ## Executive summary
 
@@ -141,7 +145,7 @@ Note: the `nettps` logger (pid 2426338) died around 07:46, so network-wide proce
 
 ## Public explorer indexer stall
 
-The public TN10 indexer (api-tn10.kaspa.org, apparently also kaspa.stream) froze network-wide at 2026-09-25 21:55:38 CEST, about 7 minutes into the round-1 PHASE1 overload, and was still frozen through round 4. Balances stay live because they come from kaspad; the transaction list does not. Mining rewards were verified to the sompi. Details: [STP-KAS/grok-bot-explorer-rewards-check](https://github.com/STP-KAS/grok-bot-explorer-rewards-check).
+The public TN10 indexer (api-tn10.kaspa.org, apparently also kaspa.stream) froze network-wide at 2026-09-25 21:55:38 CEST, about 7 minutes into the round-1 PHASE1 overload, and was still frozen through round 4. Balances stay live because they come from kaspad; the transaction list does not. Mining rewards were verified to the sompi. Details: [STP-KAS/tn10-storm-2026-09-26-explorer-check](https://github.com/STP-KAS/tn10-storm-2026-09-26-explorer-check).
 
 ## Flaws and operational lessons
 
@@ -161,7 +165,7 @@ The public TN10 indexer (api-tn10.kaspa.org, apparently also kaspa.stream) froze
 - Require a much larger free-space reserve before TN10 pruning-point moves, or stop cleanly before the expected window.
 - Add a carrier `FeePolicy`/feerate parameter and return an ordinary insufficient-funds error instead of asserting on the first too-small UTXO.
 - Add a preflight that measures the largest required carrier transaction, available UTXOs, and RAM/disk headroom before launching multi-worker vprog tests.
-- Round 5: storm until the faucet is empty, plus index-free tic-tac-toe and vprog runners → [grok-bot-vprogs-round5](https://github.com/STP-KAS/grok-bot-vprogs-round5).
+- Round 5: storm until the faucet is empty, plus index-free tic-tac-toe and vprog runners → [tn10-storm-2026-09-26-r5](https://github.com/STP-KAS/tn10-storm-2026-09-26-r5).
 
 ## Draft upstream issues (not filed)
 
